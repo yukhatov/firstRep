@@ -1,0 +1,8 @@
+If you got PHP Fatal error:  Call to undefined function curl_init() or json_decode() etc.
+1 - check your extension directory - grep extension_dir=  `which php-config`
+	in my case it was - extension_dir='/usr/lib/php5/20121212'
+2 - GOTO your php.ini 
+3 - change line extension_dir = "./" to extension_dir='/usr/lib/php5/20121212'
+4 - /etc/init.d/apache2 restart
+5 - reboot
+
